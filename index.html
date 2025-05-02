@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Understanding React.js</title>
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css" />
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/black.css" />
+    <style>
+      .code {
+        font-family: monospace;
+        font-size: 18px;
+        padding: 15px;
+        background-color: #272822;
+        border-radius: 5px;
+        color: #f8f8f2;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Understanding React.js</h1>
+          <p>A Simple and Practical Guide</p>
+        </section>
+
+        <section>
+          <h2>What is React?</h2>
+          <p>
+            React is a JavaScript library for building interactive user
+            interfaces efficiently using components.
+          </p>
+        </section>
+
+        <section>
+          <h2>Why React?</h2>
+          <ul>
+            <li>Component-based architecture</li>
+            <li>Fast rendering with Virtual DOM</li>
+            <li>Strong community support</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Components in React</h2>
+          <p>Building blocks of React applications:</p>
+          <div class="code">
+            &lt;Header /&gt;<br />
+            &lt;Navbar /&gt;<br />
+            &lt;Footer /&gt;
+          </div>
+        </section>
+
+        <section>
+          <h2>Creating Your First Component</h2>
+          <pre class="code">
+import React from 'react';
+
+function HelloWorld() {
+  return &lt;h1&gt;Hello, React!&lt;/h1&gt;;
+}
+
+export default HelloWorld;
+        </pre
+          >
+        </section>
+
+        <section>
+          <h2>JSX Syntax</h2>
+          <p>JSX combines HTML and JavaScript:</p>
+          <pre class="code">
+const element = &lt;h2&gt;Hello, JSX!&lt;/h2&gt;;
+        </pre
+          >
+        </section>
+
+        <section>
+          <h2>Props</h2>
+          <p>Passing data to components:</p>
+          <pre class="code">
+function Greeting(props) {
+  return &lt;h3&gt;Hello, {props.name}!&lt;/h3&gt;;
+}
+
+&lt;Greeting name="Mark" /&gt;
+        </pre
+          >
+        </section>
+
+        <section>
+          <h2>State and Hooks</h2>
+          <p>Managing dynamic data:</p>
+          <pre class="code">
+import { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Count: {count}&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+        Increment
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+        </pre
+          >
+        </section>
+
+        <section>
+          <h2>Lifecycle Methods & useEffect</h2>
+          <pre class="code">
+import { useEffect } from 'react';
+
+useEffect(() =&gt; {
+  console.log("Component mounted");
+}, []);
+        </pre
+          >
+        </section>
+
+        <section>
+          <h2>Conclusion</h2>
+          <ul>
+            <li>Easy to learn, powerful to use</li>
+            <li>Community and ecosystem support</li>
+            <li>Great for building scalable apps</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Thank You!</h2>
+          <p>Questions & Discussion</p>
+        </section>
+      </div>
+    </div>
+
+    <script src="node_modules/reveal.js/dist/reveal.js"></script>
+    <script>
+      Reveal.initialize({ hash: true });
+    </script>
+  </body>
+</html>
